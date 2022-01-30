@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/style.css" rel="stylesheet">
+    <title>Code Quiz</title>
+</head>
+<body>
+    
+    <!-- High Score & Timer -->
+    <header id="View">
+        <a href="HighScores.html" >View High Scores</a> 
+        <h3 id="time">Time: </h3>
+    </header>
+    
+<div class="container">
+        <div class="block hide" id="intro" >
+            <h1>👨‍💻Coding Quiz Challenge👨‍💻</h1>
+            <p>Try to answer the following code-related questions within the time limit.
+            <br>
+            Keep in mind that incorrect answers will penalize your score/time by 10 seconds!
+            <br>
+            </p>
+            <div class="controls">
+                <button id="start-btn" class="start-btn btn">Start Quiz</button>
+            </div>
+        </div>
+        
+        <div id="question-container" class="hide block">
+            <div id="question-text" class="hide block"></div>
+            <div id="question-choice">
+                <ul class="btn-grid">
+                    <li><button type="button" id="btn-1" class="bton" onclick="checkAnswer('1')" ></button></li>
+                    <li><button type="button" id="btn-2" class="bton" onclick="checkAnswer('2')" ></button></li>
+                    <li><button type="button" id="btn-3" class="bton" onclick="checkAnswer('3')" ></button></li>
+                    <li><button type="button" id="btn-4" class="bton" onclick="checkAnswer('4')" ></button></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="check-answer" class="hide flex"></div>
+    </div>
+
+    <div id="Score" class="hide block">
+        <h2 id="endMessage">Finished!</h2>
+        <div id="results"></div>
+
+        <form >
+            <div id="initials">
+                <label for="users" id="name">Enter Initials:</label>
+                <input type="text" id="contactInfo">
+                <input type="button" id= "userInfo" class="submit-btn" onclick="location.href='HighScores.html';" value="Submit" />
+            </div>
+        </form>
+    </div>
+
+
+
+</body>
+<script src="./assets/script.js"></script>
+</html>
